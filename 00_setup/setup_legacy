@@ -1,0 +1,70 @@
+% Section
+\renewcommand{\section}[1]{
+    \addcontentsline{toc}{section}{#1}
+	\begin{tcolorbox}[
+			arc=0mm,
+			colback=seccol,
+			colframe=white,
+			bottomrule = 0 mm,
+			toprule = 0 mm,
+			leftrule = 0 mm,
+			rightrule = 0 mm,
+			valign=center,
+			left=0.5mm,
+			top= 0.2 mm,
+			bottom= 0.2 mm,
+			fontupper=\color{white},
+			before skip = 2mm,
+			leftright skip = -0.5mm,
+			after skip = 1 mm]
+
+		\textbf{#1}
+	\end{tcolorbox}
+}
+	
+% Subsection	
+\renewcommand{\subsection}[1]{
+   \addcontentsline{toc}{subsection}{#1}
+	\begin{tcolorbox}[
+			arc=0mm,
+			colback=subseccol,
+			colframe=white,
+			bottomrule = 0 mm,
+			toprule = 0 mm,
+			leftrule = 0 mm,
+			rightrule = 0 mm,
+			valign=center,
+			left=0.5mm,
+			top=0.2mm,
+			bottom=0.2mm,
+			fontupper=\color{white},
+			before skip = 0.5mm,
+			leftright skip = -0.5mm,
+			after skip = .5 mm]
+			
+		\small \textbf{#1:}
+	\end{tcolorbox}
+}
+	
+% Subsubsection	
+\renewcommand{\subsubsection}[1]{
+    %\addcontentsline{toc}{subsubsection}{#1}
+	\begin{tcolorbox}[
+			arc=0mm,
+			colback=subsubseccol,
+			colframe=white,
+			bottomrule = 0 mm,
+			toprule = 0 mm,
+			leftrule = 0 mm,
+			rightrule = 0 mm,
+			valign=center,
+			left=0.5mm,
+			top=-0.2mm,
+			bottom=-0.2mm,
+			fontupper=\color{white},
+			before skip = 0.5mm,
+			leftright skip = -0.5mm,
+			
+		\small \textbf{#1:}
+	\end{tcolorbox}
+}

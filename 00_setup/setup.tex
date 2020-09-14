@@ -1,0 +1,111 @@
+\documentclass[a4paper]{article}
+\setcounter{page}{0}
+\renewcommand{\baselinestretch}{0.9} %spacing between lines
+
+\usepackage{verbatim} %multiline comments
+
+\usepackage{pdfpages} %include pdfs
+
+\usepackage{hyperref}
+
+%generate geometry of paper
+\usepackage[landscape]{geometry}
+\geometry{
+     %total={210mm,297mm},
+     left=2mm,
+     right=2mm,
+     top=15mm,
+     bottom=0mm,
+     footskip= 15pt
+ }
+
+\usepackage[utf8]{inputenc}
+\usepackage[normalem]{ulem}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{bm}
+
+
+\usepackage{mathtools}
+\usepackage[ngerman]{babel}
+
+\usepackage{multicol} %multiple columns
+\usepackage{multirow}
+\usepackage{wrapfig} %wrap text around figures
+
+
+%get rid of spacing between lists
+%\usepackage{enumitem} 
+    %\setlist{nolistsep}
+
+%custom header with title & authors
+\usepackage{fancyhdr} 
+    \pagestyle{fancy}
+    \fancyhf{}
+    \rhead{Franz Bühlmann, \textit{franzbu@ethz.ch}; Joshua Näf, \textit{naefjo@ethz.ch}}
+    %\chead{\textbf{\large{\thepage}}}
+    \lhead{\textbf{Regelungstechnik 1 HS19, Prof. Dr. L. Guzzella}}
+    \setlength{\headsep}{1mm}
+    \cfoot{\textbf{\thepage}}
+
+%imagepackage
+\usepackage{graphicx} 
+    \graphicspath{ {./images/} }
+
+\usepackage{parskip} %Einzug aus, Absatzabstand ein
+    \tolerance=2000 %Toleranz für Wortzwischenräume
+    \setlength{\emergencystretch}{20pt} %Zusätzliche Zeilendehnbarkeit in Notfällen
+    \setlength\parindent{0pt}
+    \setlength{\columnseprule}{1px} %thickness of column seperator
+    
+
+
+%New Titles
+\usepackage{tcolorbox}
+    \definecolor{seccol}{RGB}{7, 61, 50}
+    \definecolor{subseccol}{RGB}{29, 120, 116}
+    \definecolor{subsubseccol}{RGB}{103, 146, 137}
+ 
+\usepackage[explicit]{titlesec}
+
+\titleformat{\section}
+  {\normalfont\large\bfseries}
+  {}
+  {0em}
+  {\pgfsetfillopacity{1}
+    \colorbox{seccol}{
+        \parbox{\dimexpr\linewidth-4.5\fboxsep\relax}{
+            \textcolor{white}{\thesection\quad#1}}}
+    \pgfsetfillopacity{1}}
+  
+\titleformat{\subsection}
+  {\normalfont\bfseries}
+  {}
+  {0em}
+  {\pgfsetfillopacity{1}
+    \colorbox{subseccol}{
+        \parbox{\dimexpr\linewidth-4.5\fboxsep\relax}{
+            \textcolor{white}{\thesubsection\quad#1:}}}
+    \pgfsetfillopacity{1}}
+
+\titleformat{\subsubsection}
+  {\normalfont\small\bfseries}
+  {}
+  {0em}
+  {\pgfsetfillopacity{1}
+    \colorbox{subsubseccol}{
+        \parbox{\dimexpr\linewidth-4.5\fboxsep\relax}
+            {\textcolor{white}{\thesubsubsection\quad#1:}}}
+    \pgfsetfillopacity{1}}
+    
+\titlespacing{\section}{0pt}{\parskip}{-0.75\parskip}    
+\titlespacing{\subsection}{0pt}{\parskip}{-0.75\parskip}
+\titlespacing{\subsubsection}{0pt}{\parskip}{-0.75\parskip}
+
+\newcommand{\TODO}[1]{\large\textcolor{red}{\textbf{TODO: #1\\}}\normalsize}
+
+\title{Regelungstechnik 1}
+\author{Franz Bühlmann \& Joshua Näf}
+\date{}
